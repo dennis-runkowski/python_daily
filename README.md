@@ -1,2 +1,2 @@
 # python_daily
-Write some python everyday
+The Goal is to spend 30-60 minutes on some python every day.
