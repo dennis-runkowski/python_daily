@@ -1,8 +1,8 @@
-"""Create a band name. """
+"""Treasure Game. """
 
 
 def main():
-    """Main method to generate band name. """
+    """Main method for the game. """
     print('''
     *******************************************************************************
             |                   |                  |                     |
