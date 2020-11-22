@@ -1,4 +1,4 @@
-"""Create a band name. """
+"""Tip Calculator."""
 from datetime import datetime, time
 
 VALID_PERCENT = {
@@ -10,7 +10,7 @@ VALID_PERCENT = {
 
 
 def main():
-    """Main method to generate band name. """
+    """Main method for the tip calculator. """
     print("################################")
     print(" Welcome to the tip Calculator  ")
     print("################################")
