@@ -1,5 +1,6 @@
 """Silient Auction App"""
 from os import system, name
+
 logo = '''
                          ___________
                          \         /
