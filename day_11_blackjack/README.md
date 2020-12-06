@@ -1,4 +1,4 @@
 # Blackjack App
-## Time to complete - 10 mins
+## Time to complete - 1 day
 ## Usage
 Run `python main.py`
