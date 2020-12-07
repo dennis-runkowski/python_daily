@@ -17,35 +17,36 @@ def main():
     }
     print(logo)
     print('Current score: 0!')
-    for item in data:
+    while True:
+        random.shuffle(data)
+        for item in data:
+            compare += 1
+            if compare == 2:
+                compare = 0
+                guess_store['guess_b'] = item['follower_count']
+                print(vs)
+                print(
+                    f'Against B: {item["name"]}, a {item["description"]}'
+                    f' from {item["country"]}'
+                )
+                guess = input('Who has more followers: Type A or B: ').lower()
+                guess = f'guess_{guess}'
+                winner = max(guess_store, key=(lambda k: guess_store[k]))
+                if guess == winner:
+                    score += 1
+                    clear()
+                    print(logo)
+                    print(f'You are correct! Current score: {score}!')
+                    continue
+                else:
+                    print(f'You are wrong. Game Over. Score: {score}')
+                    return
 
-        compare += 1
-        if compare == 2:
-            compare = 0
-            guess_store['guess_b'] = item['follower_count']
-            print(vs)
+            guess_store['guess_a'] = item['follower_count']
             print(
-                f'Against B: {item["name"]}, a {item["description"]}'
+                f'Compare A: {item["name"]}, a {item["description"]}'
                 f' from {item["country"]}'
             )
-            guess = input('Who has more followers: Type A or B: ').lower()
-            guess = f'guess_{guess}'
-            winner = max(guess_store, key=(lambda k: guess_store[k]))
-            if guess == winner:
-                score += 1
-                clear()
-                print(logo)
-                print(f'You are correct! Current score: {score}!')
-                continue
-            else:
-                print(f'You are wrong. Game Over. Score: {score}')
-                return
-
-        guess_store['guess_a'] = item['follower_count']
-        print(
-            f'Compare A: {item["name"]}, a {item["description"]}'
-            f' from {item["country"]}'
-        )
 
 
 def clear():
